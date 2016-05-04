@@ -14,12 +14,16 @@ import AVFoundation
 class SplashViewController: UIViewController
 {
 	let name:String = "Verreciel"
+	let skip:Bool = true
+	
 	var logo:UIImageView!
 	var blink:UIView!
 	var button:UIButton!
 	
 	override func viewDidLoad()
 	{
+		if skip == true { exit() ; return }
+		
 		self.view.backgroundColor = .blackColor()
 		
 		// Logo
